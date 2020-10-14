@@ -4,12 +4,10 @@
  */
 
 object Problem002 extends App {
-  def fibonacci(n: BigInt): BigInt = {
-    def fibonacciHelper(i: BigInt, last: BigInt, nextLast: BigInt): BigInt =
-      if (i == n) last else fibonacciHelper(i + 1, last + nextLast, last)
-    fibonacciHelper(2, 1, 1)
-  }
-  println(fibonacci(4e3.toInt))
+  def fibSum (a :Int, b :Int) :Int =
+    (if (b % 2 == 0) b else 0) + (if (a+b > 4000000) 0 else fibSum(b, a + b))
+  def answer : Int = fibSum(1, 2)
+  println(answer)
 
 }
 
