@@ -1,2 +1,9 @@
 *.class
 *.log
+.idea/*
+*.class
+*.sbt
+.bsp/*
+.project/*
+*test*
+*build*
