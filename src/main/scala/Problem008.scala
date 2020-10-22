@@ -28,7 +28,7 @@ object Problem008 extends App{
   val windowLength = 13
   println(
     bigNumber.sliding(windowLength).toList
-      .map(_.split("").map(_.toLong).toList)
+      .map(_.split("").map(_.toLong))
       .maxBy(_.product)
       .product
   )
