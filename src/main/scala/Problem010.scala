@@ -6,13 +6,13 @@
  */
 
 object Problem010 extends App{
-  val TOP = 2000000
-  var numbers = List.range(2, TOP)
-  var primes = List(2)
-  while(numbers.nonEmpty) {
-    numbers = numbers.filter(x => x % primes.head != 0)
-    if(numbers.nonEmpty)
-    primes = numbers.head :: primes
-  }
-  println(primes.map(_.toLong).sum)
+  def odds(n:Long): Stream[Long] = Stream.cons(n,odds(n + 2))
+
+  def isPrime(n:Long): Boolean =
+    (primes takeWhile { _ <= math.floor(math.sqrt(n)) }) forall { n % _ != 0 }
+  lazy val primes: Stream[Long] = Stream.cons(2,odds(3) filter isPrime)
+  println(
+    (primes takeWhile { _ < 2000000 }).toList.sum
+  )
 }
+
