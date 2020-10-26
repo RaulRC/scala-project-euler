@@ -14,5 +14,5 @@ object Problem010 extends App{
     if(numbers.nonEmpty)
     primes = numbers.head :: primes
   }
-  println(primes.sum)
+  println(primes.map(_.toLong).sum)
 }
