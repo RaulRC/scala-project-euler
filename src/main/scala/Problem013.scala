@@ -110,6 +110,4 @@ object Problem013 extends App{
   println(
     bigNumbers.split("\n").map(BigInt(_)).sum.toString().substring(0, 10)
   )
-
-
 }

@@ -15,5 +15,4 @@ object Problem012 extends App{
   println(
     triangular.find(divisors(_) > N_DIVISORS).head
   )
-
 }
