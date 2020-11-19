@@ -1,6 +1,3 @@
-import scala.collection.mutable.ArrayBuffer
-import scala.collection.mutable.{BitSet => MBitSet, ArrayBuffer}
-
 /*
  * @project project-euler
  * @author raul.reguillo on 2020-11-19
