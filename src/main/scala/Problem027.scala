@@ -42,7 +42,7 @@ object Problem027 extends App{
   val result = for {
     a <- -TOP + 1 until TOP
     b <- -TOP to TOP
-    p = polyPrimes(primes, a, b, 0) if (p > 0)
+    p = polyPrimes(primes, a, b, 0) if p > 0
   } yield (a * b, p)
 
   println(
