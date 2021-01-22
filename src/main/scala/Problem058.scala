@@ -111,3 +111,4 @@ object Euler058b extends App {
 
   println((k+1)*2 + 1)
 }
+
